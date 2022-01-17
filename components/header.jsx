@@ -6,8 +6,7 @@ const header = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    getCategories()
-      .then((newCategories) => setCategories(newCategories));
+    getCategories().then((newCategories) => setCategories(newCategories));
   }, []);
   return (
     <div className="container mx-auto px-10 mb-8">
