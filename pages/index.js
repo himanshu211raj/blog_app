@@ -1,18 +1,8 @@
 import Head from "next/head";
 import { PostCard, Categories, PostWidget } from "../components";
-
 import { getPosts } from "../services";
+import { FeaturedPosts } from "../sections";
 
-// const posts = [
-//   {
-//     title: "React Testing",
-//     excerpt: "React Testing is a new way to test React apps",
-//   },
-//   {
-//     title: "React Testing with tailwindcss",
-//     excerpt: "React Testing is a new way to test React apps with tailwindcss",
-//   },
-// ];
 export default function Home({ posts }) {
   return (
     <div className="container mx-auto px-10 mb-8">
@@ -20,6 +10,7 @@ export default function Home({ posts }) {
         <title>Blog APP - made using in ❤️ with NextJs</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <FeaturedPosts />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
           {posts.map((post) => (
