@@ -212,7 +212,7 @@ export const getFeaturedPosts = async () => {
 export const submitComment = async (obj) => {
   const result = await fetch("/api/comments", {
     method: "POST",
-    headers: {
+    Headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(obj),
